@@ -209,6 +209,104 @@ a.navbar-brand {
     color: white;
 }
 
+.third-divider{
+    height: auto;
+    text-align: center;
+    padding: 50px;
+}
+ .third-divider h2:first-child{
+     color: #6ECB63;
+ }
+
+.third-divider h2{
+    text-transform: uppercase;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/** diseases area**/
+
+.disease-card-container{
+    height: auto;
+    width: 100%;
+    padding: 0 30px 30px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 10px;
+}
+.disease-card{
+    height: 313px;
+    min-width: 313px;
+    flex: 1 1 313px;
+    overflow: hidden;
+    position: relative;
+}
+.disease-card:after {
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    display:inline-block;
+    background: rgb(38,95,31);
+    /*background: linear-gradient(0deg, rgba(38,95,31,1) 0%, rgba(38,95,31,0.7819502801120448) 14%, rgba(38,95,31,0) 48%);*/
+    /*background: linear-gradient(0deg, rgba(110,203,99,1) 0%, rgba(110,203,99,1) 14%, rgba(38,95,31,0) 48%);*/
+    background: linear-gradient(0deg, rgba(71,131,64,1) 0%, rgba(90,161,82,0.7147233893557423) 14%, rgba(38,95,31,0) 48%);
+}
+
+.disease-card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.disease-card h5{
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+
+}
+
+/** PRICES **/
+.prices{
+    text-align: center;
+    padding: 50px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.prices h1{
+    text-transform: uppercase;
+    color: #6ECB63;
+    font-size: 3rem;
+}
+
+.prices p{
+    max-width: 300px;
+    margin: 25px auto 25px;
+}
+.prices button{
+    padding: 15px 20px;
+    font-size: 2rem;
+    border: 1px #6ECB63 solid;
+    background-color: #6ECB63;
+    color: white;
+    font-weight: bolder;
+}
+
+.prices button:hover{
+    background-color: #0c4128;
+}
 
 
 @media (max-width: 576px) {
@@ -267,6 +365,10 @@ a.navbar-brand {
     }
     .second-divider{
         gap: 10px;
+    }
+
+    .prices h1{
+        font-size: 2rem;
     }
 }
 

@@ -9,9 +9,9 @@ a.navbar-brand {
     font-weight: bolder;
     font-size: 1.5rem;
     text-transform: uppercase;
-    width: 50%;
+    width: 40%;
     display: inline-block;
-
+    text-align: right;
 }
 
 .nav-item, .nav-link {
@@ -24,7 +24,7 @@ a.navbar-brand {
     color: #6ECB63;
 }
 
-
+/*---------CAROUSEL------------*/
 .carousel {
     margin-top: 70px;
     height: 600px;
@@ -49,25 +49,32 @@ a.navbar-brand {
     object-fit: cover;
 }
 
-.divider {
+/*---------FIRST DIVIDER------------*/
+.feature-card-container {
     height: auto;
     width: 100%;
     background-color: #265f1f;
     color: white;
     display: flex;
-    flex-flow: row wrap;
+    /*flex-flow: column;*/
     justify-content: center;
+    /*align-items: center;*/
+    flex-flow: row wrap;
     align-items: flex-start;
     gap: 30px;
     padding: 20px;
 }
 
-.divider img {
+
+.feature-card-container img {
     height: 200px;
+    margin: auto 200px;
     display: block;
+    flex: 1 0;
+    object-fit: cover;
 }
 
-.divider-card {
+.feature-card {
     font-family: 'Raleway', sans-serif;
     font-weight: lighter;
     font-size: 1.5rem;
@@ -80,33 +87,43 @@ a.navbar-brand {
     text-align: center;
 }
 
-.divider-card div:first-child {
+.feature-card div:first-child {
     font-size: 3rem;
     font-weight: bolder;
     color: #B1E693;
 }
 
-
+/*---------INFORMATION CARDS------------*/
 .my-container {
     display: flex;
     width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: column-reverse nowrap;
+    height: auto;
     justify-content: center;
     align-content: center;
-    height: auto;
+}
+
+@media (min-width: 1200px) {
+
+    .my-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 .half-screen {
     flex: 1 1 20%;
-    width: 50%;
     height: 540px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
+    width: 100%;
+    flex-shrink: 0;
+    min-width: 240px;
 }
+
 
 .half-screen img {
     height: 100%;
@@ -118,7 +135,7 @@ a.navbar-brand {
 .custom-card {
     padding: 10px;
     flex: 1 0 auto;
-    width: 50%;
+    width: 40%;
     height: 50%;
     display: flex;
     flex-flow: column nowrap;
@@ -155,21 +172,25 @@ a.navbar-brand {
     padding-right: 10px;
 }
 
-/** Second divider**/
+/*---------NEED HELP?--------*/
 
 .second-divider {
-    height: auto;
     width: 100%;
     background-color: #265f1f;
     color: white;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: 120px;
+    gap: 40px;
     padding: 50px 200px;
 }
-
+@media (min-width: 1200px) {
+    .second-divider{
+        gap: 120px;
+        flex-flow: row wrap;
+    }
+}
 .help {
     padding: 10px;
 }
@@ -238,17 +259,26 @@ a.navbar-brand {
     width: 100%;
     padding: 0 30px 30px;
     display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
+    flex-flow: column nowrap;
     justify-content: center;
     align-content: flex-start;
     gap: 10px;
 }
 
+@media (min-width: 1024px) {
+    .disease-card-container{
+        flex-flow: row wrap;
+        align-items: flex-start;
+    }
+    .disease-card{
+        min-width: 313px;
+        flex: 1 1 313px;
+    }
+
+}
 .disease-card {
     height: 313px;
-    min-width: 313px;
-    flex: 1 1 313px;
+    flex: 1 1;
     overflow: hidden;
     position: relative;
 }
@@ -392,7 +422,7 @@ a.navbar-brand {
 
 .maps-container {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     gap: 10px;
     justify-content: center;
 }
@@ -402,8 +432,7 @@ a.navbar-brand {
     text-align: right;
     flex: 1 1 350px;
     height: 400px;
-    width: 500px;
-    min-width: 350px;
+    width: 100%;
 }
 
 #gmap_canvas {
@@ -413,7 +442,14 @@ a.navbar-brand {
     width: 100%;
     min-width: 350px;
 }
-
+@media (min-width: 1200px) {
+    .mapouter{
+        width: 500px;
+    }
+    .maps-container{
+        flex-flow: row wrap;
+    }
+}
 .target {
     border-top: 72px solid transparent;
     margin-top: -72px;
@@ -421,16 +457,19 @@ a.navbar-brand {
     -moz-background-clip: padding;
     background-clip: padding-box;
 }
-@media (max-width: 576px) {
-    .mx-auto {
-        margin-left: 20px !important;
-    }
 
-    button.navbar-toggler {
-        position: absolute;
-        right: 20px;
-        top: 20px;
+
+/*********** FOR DESKTOP***************/
+@media (min-width: 1200px) {
+    .feature-card-container {
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: flex-end;
     }
+}
+
+
+@media (max-width: 700px) {
 
     .carousel-item img {
         object-fit: contain;
@@ -454,10 +493,6 @@ a.navbar-brand {
         height: 200px;
     }
 
-    .my-container {
-        flex-flow: column-reverse nowrap;
-        height: auto;
-    }
 
     .custom-card {
         padding: 20px 100px;
@@ -466,11 +501,6 @@ a.navbar-brand {
         display: block;
     }
 
-    .half-screen {
-        width: 100%;
-        flex-shrink: 0;
-        min-width: 240px;
-    }
 
     .contact-us {
         text-align: center;
@@ -486,27 +516,61 @@ a.navbar-brand {
 
 }
 
-@media (min-width: 1050px) {
-    div.navbar-brand {
-        padding: 30px;
-        position: relative;
-        text-align: center;
-    }
+/*div.navbar-brand {*/
+/*    padding: 30px;*/
+/*    position: relative;*/
+/*    text-align: left;*/
+/*}*/
+
+/*.navbar {*/
+/*    flex-flow: column;*/
+/*    justify-content: center;*/
+/*    justify-items: center;*/
+/*    text-align: center;*/
+/*}*/
 
 
-    .nav-item, .nav-link {
-        text-transform: uppercase;
-        padding: 20px 25px;
-        font-size: 1.5rem;
-        font-weight: lighter;
-        min-width: 120px;
-    }
+
+/*.mx-auto {*/
+/*    margin-left: 100px !important;*/
+/*}*/
+
+/*button.navbar-toggler {*/
+/*    position: absolute;*/
+/*    right: 20%;*/
+/*    top: 20px;*/
+/*}*/
+
+@media (min-width: 1200px) {
+
     .target {
-        border-top: 132px solid transparent;
-        margin-top: -132px;
+        border-top: 92px solid transparent;
+        margin-top: -92px;
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box;
     }
-
+    .nav-item, .nav-link {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        min-width: 120px;
+        margin: 10px 20px;
+    }
+}
+footer{
+    position: relative;
+}
+footer p{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+.back-to-top{
+    position: absolute;
+    padding: 0 10px;
+    display: inline-block;
+    right: 20px;
+    bottom: 15px;
 }

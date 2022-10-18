@@ -18,29 +18,24 @@
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-md fixed-top bg-light ">
-        <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
-            <div class="navbar-brand">
-                <a class="navbar-brand" href="#features">ОПТИКА +/-</a>
-            </div>
+    <nav class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container-fluid  align-items-center">
+            <a class="navbar-brand" href="#features">ОПТИКА +/-</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse navbar-items" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item ">
-
-                    </li>
-                    <li class="nav-item ">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
                         <a class="nav-link" href="#features">Про нас</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#diseases">Послуги</a>
                     </li>
-<!--                    <li class="nav-item">-->
-<!--                        <a class="nav-link" href="#doctors">Лікарі</a>-->
-<!--                    </li>-->
+                    <!--                    <li class="nav-item">-->
+                    <!--                        <a class="nav-link" href="#doctors">Лікарі</a>-->
+                    <!--                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link" href="#prices">Ціни</a>
                     </li>
@@ -89,21 +84,21 @@
         </button>
     </div>
 
-    <div id="features" class="divider target">
+    <div id="features" class="feature-card-container target">
         <img src="images/dark-logo.png"/>
-        <div class="divider-card">
+        <div class="feature-card">
             <div>2</div>
             локації у центрі міста
         </div>
-        <div class="divider-card">
+        <div class="feature-card">
             <div>5</div>
             діагностичних кабінетів
         </div>
-        <div class="divider-card">
+        <div class="feature-card">
             <div>14</div>
             років досвіду
         </div>
-        <div class="divider-card">
+        <div class="feature-card">
             <div>6</div>
             діагностичних апаратів
         </div>
@@ -118,7 +113,7 @@
             <div class="custom-card">
                 <img class="feature-icon" src="images/clock-regular.svg"/>
                 <h2 class="fw-normal">Робочі години</h2>
-                <p>З понеділка по п'ятницю з 10 до 18. У суботу з 10 до 14</p>
+                <p>З понеділка до п'ятниці з 10 до 18. У суботу з 10 до 14</p>
             </div>
             <div class="custom-card">
                 <img class="feature-icon" src="images/hand-holding-heart-solid.svg"/>
@@ -151,11 +146,11 @@
         <h2>офтальмологічних захворювань</h2>
     </div>
 
-    <div class="disease-card-container" >
+    <div class="disease-card-container">
         <div class="disease-card"><img src="images/myopia.jpg"/> <h5>Міопія</h5></div>
         <div class="disease-card"><img src="images/hypermetropia.jpg"/> <h5>Гіперметропія</h5></div>
         <div class="disease-card"><img src="images/kids-crop.jpg"/> <h5>Дитяча офтальмологія</h5></div>
-        <div class="disease-card"><img src="images/ortokeratology.webp"/> <h5>Ортокератологія</h5></div>
+        <div class="disease-card"><img src="images/ortokeratology-new.jpg"/> <h5>Ортокератологія</h5></div>
         <div class="disease-card"><img src="images/presbiopia.jpg"/> <h5>Пресбіопія</h5></div>
         <div class="disease-card"><img src="images/dry%20eye.jpg"/> <h5>Синдром сухого ока</h5></div>
         <div class="disease-card"><img src="images/conjunctivitis.webp"/> <h5>Кон'юнктивіт</h5></div>
@@ -170,7 +165,7 @@
         <button>ЦІНИ</button>
     </div>
 
-    <div class="information-card-container" >
+    <div class="information-card-container">
         <div class="information-card" id="inform-card-1"><img class="information-logo" src="images/logo.png"/>
             <p>Комплекса офтальмологічна діагностика, підбір і виготовлення окулярів, підбір і навчання контактних
                 лінз</p></div>
@@ -189,28 +184,27 @@
             <h3>Адрес<br> електронної пошти</h3>
             <p>plus.plus.minys@gmail.com</p></div>
     </div>
-<div class="maps-container">
-    <div class="mapouter">
-        <div class="gmap_canvas">
-            <iframe id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=%D1%96%D0%B2%D0%B0%D0%BD%D0%BE-%D1%84%D1%80%D0%B0%D0%BD%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%20%D0%B3%D1%80%D1%83%D1%88%D0%B5%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2012&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                  ></iframe>
+    <div class="maps-container">
+        <div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=%D1%96%D0%B2%D0%B0%D0%BD%D0%BE-%D1%84%D1%80%D0%B0%D0%BD%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%20%D0%B3%D1%80%D1%83%D1%88%D0%B5%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2012&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                ></iframe>
+            </div>
+        </div>
+        <div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=%D1%96%D0%B2%D0%B0%D0%BD%D0%BE-%D1%84%D1%80%D0%B0%D0%BD%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%20%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BF%D0%BB%D1%8E%D1%81&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                ></iframe>
+            </div>
         </div>
     </div>
-    <div class="mapouter">
-        <div class="gmap_canvas">
-            <iframe id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=%D1%96%D0%B2%D0%B0%D0%BD%D0%BE-%D1%84%D1%80%D0%B0%D0%BD%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%20%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BF%D0%BB%D1%8E%D1%81&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                   ></iframe>
-        </div>
-    </div>
-</div>
 
     <!-- FOOTER -->
-    <footer class="container">
-        <p class="float-end"><a href="#">На початок</a></p>
-        <p>&copy;
-        <p class="year"></p> Daringu</p>
+    <footer>
+        <p>&copy; 2022 Daringu </p>
+        <a class="back-to-top" href="#carouselControls">На початок</a>
     </footer>
 </main>
 

@@ -1,6 +1,9 @@
-html {
+html, body {
     font-family: 'Inter Tight', sans-serif;
+    padding: 0;
+    margin: 0;
 }
+
 
 /*---------NAVBAR------------*/
 
@@ -16,85 +19,115 @@ a.navbar-brand {
 
 .nav-item, .nav-link {
     min-width: 100px;
-    padding: 0;
+    padding: 0.5rem 0;
 }
 
+.navbar > .container-fluid{
+    justify-content: space-evenly;
+}
 
 .nav-item a:hover {
     color: #6ECB63;
 }
 
+/*div.navbar-brand {*/
+/*    padding: 30px;*/
+/*    position: relative;*/
+/*    text-align: left;*/
+/*}*/
+
+/*.navbar {*/
+/*    flex-flow: column;*/
+/*    justify-content: center;*/
+/*    justify-items: center;*/
+/*    text-align: center;*/
+/*}*/
+
+
+/*.mx-auto {*/
+/*    margin-left: 100px !important;*/
+/*}*/
+
+/*button.navbar-toggler {*/
+/*    position: absolute;*/
+/*    right: 20%;*/
+/*    top: 20px;*/
+/*}*/
+
 /*---------CAROUSEL------------*/
 .carousel {
-    margin-top: 70px;
-    height: 600px;
+    margin-top: 46px;
     position: relative;
+}
+
+.carousel-item img, #carouselControls {
+    object-fit: cover;
+    height: 15em;
 }
 
 .carousel-caption h5 {
     position: absolute;
-    bottom: 70px;
-    left: 100px;
+    bottom: -5px;
+    left: -10px;
     color: black;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 0.75rem;
     font-weight: normal;
     letter-spacing: 2px;
-    background-color: white;
-    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    text-align: center;
+    padding: 1em;
 }
 
-.carousel-item img {
-    height: 600px;
-    object-fit: cover;
-}
 
-/*---------FIRST DIVIDER------------*/
-.feature-card-container {
+/*---------MAIN POINTS------------*/
+.main-points-container {
     height: auto;
     width: 100%;
     background-color: #265f1f;
     color: white;
     display: flex;
-    /*flex-flow: column;*/
     justify-content: center;
-    /*align-items: center;*/
     flex-flow: row wrap;
     align-items: flex-start;
     gap: 30px;
     padding: 20px;
 }
 
-
-.feature-card-container img {
-    height: 200px;
-    margin: auto 200px;
-    display: block;
-    flex: 1 0;
+.main-point-card img {
+    width: 100%;
+    height: 5em;
     object-fit: cover;
+    padding: 0;
 }
 
-.feature-card {
+#logo-img {
+    width: 100%;
+}
+
+.main-point-card {
     font-family: 'Raleway', sans-serif;
     font-weight: lighter;
     font-size: 1.5rem;
-    padding: 20px 0 15px;
-    width: 200px;
+    padding: 15px 0 15px;
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     text-align: center;
+
 }
 
-.feature-card div:first-child {
+.main-point-card div:first-child {
     font-size: 3rem;
     font-weight: bolder;
     color: #B1E693;
 }
 
 /*---------INFORMATION CARDS------------*/
-.my-container {
+.two-blocks-container {
     display: flex;
     width: 100%;
     flex-flow: column-reverse nowrap;
@@ -103,13 +136,6 @@ a.navbar-brand {
     align-content: center;
 }
 
-@media (min-width: 1200px) {
-
-    .my-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-}
 
 .half-screen {
     flex: 1 1 20%;
@@ -133,17 +159,19 @@ a.navbar-brand {
 }
 
 .custom-card {
-    padding: 10px;
+
     flex: 1 0 auto;
-    width: 40%;
+
     height: 50%;
     display: flex;
     flex-flow: column nowrap;
     align-content: center;
     justify-content: center;
     text-align: center;
-
+    padding: 20px 1em;
+    width: 100%;
 }
+
 
 .custom-card img {
     height: 50px;
@@ -174,7 +202,7 @@ a.navbar-brand {
 
 /*---------NEED HELP?--------*/
 
-.second-divider {
+.contact-section {
     width: 100%;
     background-color: #265f1f;
     color: white;
@@ -182,18 +210,18 @@ a.navbar-brand {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    padding: 50px 200px;
+    gap: 2em;
+    padding: 2em 1.5em;
 }
-@media (min-width: 1200px) {
-    .second-divider{
-        gap: 120px;
-        flex-flow: row wrap;
-    }
-}
-.help {
-    padding: 10px;
-}
+
+/*.contact-section {*/
+/*    gap: 40px;*/
+/*}*/
+/*.contact-section {*/
+/*    gap: 120px;*/
+/*    flex-flow: row wrap;*/
+/*}*/
+
 
 .help h2 {
     font-weight: bold;
@@ -211,12 +239,12 @@ a.navbar-brand {
 
 .contact-us {
     font-family: 'Raleway', sans-serif;
-    width: 400px;
-    text-align: left;
+    width: 100%;
+    text-align: center;
     min-width: 250px;
 }
 
-.second-divider button {
+.contact-section button {
     background-color: #265f1f;
     height: auto;
     font-family: 'Inter Tight', sans-serif;
@@ -225,27 +253,28 @@ a.navbar-brand {
     text-transform: uppercase;
     border: solid 2px #B1E693;
     color: #B1E693;
-    font-size: 1.5rem;
+    font-size: 1em;
     padding: 10px;
-    min-width: 200px;
+
+
 }
 
-.second-divider button:hover {
+.contact-section button:hover {
     background-color: #6ECB63;
     color: white;
 }
 
-.third-divider {
+.disease-section {
     height: auto;
     text-align: center;
     padding: 50px;
 }
 
-.third-divider h2:first-child {
+.disease-section h2:first-child {
     color: #6ECB63;
 }
 
-.third-divider h2 {
+.disease-section h2 {
     text-transform: uppercase;
     font-family: 'Inter Tight', sans-serif;
     font-weight: 400;
@@ -265,17 +294,7 @@ a.navbar-brand {
     gap: 10px;
 }
 
-@media (min-width: 1024px) {
-    .disease-card-container{
-        flex-flow: row wrap;
-        align-items: flex-start;
-    }
-    .disease-card{
-        min-width: 313px;
-        flex: 1 1 313px;
-    }
 
-}
 .disease-card {
     height: 313px;
     flex: 1 1;
@@ -299,6 +318,7 @@ a.navbar-brand {
 
 .disease-card img {
     height: 100%;
+    min-height: 200px;
     width: 100%;
     object-fit: cover;
     z-index: -2;
@@ -314,29 +334,29 @@ a.navbar-brand {
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: normal;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 
 }
 
 /** PRICES **/
-.prices {
+.prices-section {
     text-align: center;
     padding: 50px;
     font-family: 'Raleway', sans-serif;
 }
 
-.prices h1 {
+.prices-section h1 {
     text-transform: uppercase;
     color: #6ECB63;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
-.prices p {
+.prices-section p {
     max-width: 300px;
     margin: 25px auto 25px;
 }
 
-.prices button {
+.prices-section button {
     padding: 15px 20px;
     font-size: 2rem;
     border: 1px #6ECB63 solid;
@@ -345,12 +365,12 @@ a.navbar-brand {
     font-weight: bolder;
 }
 
-.prices button:hover {
+.prices-section button:hover {
     background-color: #0c4128;
 }
 
 /** INFORMATION**/
-.information-card-container {
+.location-section {
     display: flex;
     width: 100%;
     padding: 0;
@@ -362,8 +382,7 @@ a.navbar-brand {
 
 .information-card {
     height: 313px;
-    min-width: 313px;
-    flex: 1 1 313px;
+    flex: 1 1 280px;
     overflow: hidden;
     position: relative;
     padding: 40px;
@@ -420,7 +439,7 @@ a.navbar-brand {
     background-color: #34742c;
 }
 
-.maps-container {
+.maps-section {
     display: flex;
     flex-flow: column nowrap;
     gap: 10px;
@@ -442,14 +461,8 @@ a.navbar-brand {
     width: 100%;
     min-width: 350px;
 }
-@media (min-width: 1200px) {
-    .mapouter{
-        width: 500px;
-    }
-    .maps-container{
-        flex-flow: row wrap;
-    }
-}
+
+
 .target {
     border-top: 72px solid transparent;
     margin-top: -72px;
@@ -458,90 +471,148 @@ a.navbar-brand {
     background-clip: padding-box;
 }
 
-
-/*********** FOR DESKTOP***************/
-@media (min-width: 1200px) {
-    .feature-card-container {
-        flex-flow: row wrap;
-        align-items: flex-start;
-        justify-content: flex-end;
-    }
+footer {
+    position: relative;
 }
 
+footer p {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
 
-@media (max-width: 700px) {
+.back-to-top {
+    padding: 0 10px;
+    min-width: 50px;
+    display: block;
+    text-align: center;
+    color: #B1E693;
+    text-transform: uppercase;
+}
 
-    .carousel-item img {
-        object-fit: contain;
-        height: 200px;
+@media (min-width: 320px) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+}
+
+@media (min-width: 481px) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+
+@media (min-width: 641px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    .custom-card {
+        width: 40%;
+        padding: 1em;
     }
 
-    .carousel-caption h5 {
-        position: absolute;
-        bottom: -5px;
-        left: -10px;
-        color: black;
-        text-transform: uppercase;
-        font-size: 0.75rem;
-        font-weight: lighter;
-        letter-spacing: 2px;
-        background-color: white;
+    .main-point-card {
+        flex: 1 1 300px;
+    }
+
+    #logo-img {
+        flex: 1 1 100%;
+    }
+
+    .contact-us {
+        width: 40%;
         text-align: left;
     }
 
-    #carouselControls {
-        height: 200px;
+    .contact-section {
+        flex-flow: row wrap;
+        gap: 2em;
+        justify-content: space-evenly;
     }
 
-
-    .custom-card {
-        padding: 20px 100px;
-        width: 100%;
-        height: auto;
-        display: block;
+    .contact-section button {
+        font-size: 2em;
     }
 
-
-    .contact-us {
-        text-align: center;
+    .disease-card-container {
+        flex-flow: row wrap;
+        align-items: flex-start;
     }
 
-    .second-divider {
-        gap: 10px;
+    .disease-card {
+        min-width: 313px;
+        flex: 1 1 313px;
+    }
+    .navbar > .container-fluid{
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .carousel-item img, #carouselControls {
+        height: 100%;
+        object-fit: cover;
     }
 
-    .prices h1 {
-        font-size: 2rem;
+    .prices-section h1 {
+        font-size: 3rem;
     }
 
 }
 
-/*div.navbar-brand {*/
-/*    padding: 30px;*/
-/*    position: relative;*/
-/*    text-align: left;*/
-/*}*/
-
-/*.navbar {*/
-/*    flex-flow: column;*/
-/*    justify-content: center;*/
-/*    justify-items: center;*/
-/*    text-align: center;*/
-/*}*/
+@media (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+    .nav-item, .nav-link {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        min-width: 120px;
+        margin: 10px 20px;
+    }
 
 
+    .carousel-caption h5 {
+        position: absolute;
+        bottom: 70px;
+        left: 100px;
+        color: black;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: normal;
+        letter-spacing: 2px;
+        background-color: white;
+        padding: 10px;
+    }
 
-/*.mx-auto {*/
-/*    margin-left: 100px !important;*/
-/*}*/
+    #logo-img {
+        width: 30%;
+    }
 
-/*button.navbar-toggler {*/
-/*    position: absolute;*/
-/*    right: 20%;*/
-/*    top: 20px;*/
-/*}*/
+    .two-blocks-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-@media (min-width: 1200px) {
+
+    .mapouter {
+        width: 500px;
+    }
+
+    .maps-section {
+        flex-flow: row wrap;
+    }
+
+    .main-points-container {
+        flex-flow: row wrap;
+        align-items: stretch;
+        justify-content: center;
+        gap: 3em;
+    }
+
+    .main-point-card {
+        flex: 1 1 180px;
+        padding: 1em 2em;
+    }
+
+    #logo-img {
+        flex: 1 0 350px;
+    }
 
     .target {
         border-top: 92px solid transparent;
@@ -550,27 +621,8 @@ a.navbar-brand {
         -moz-background-clip: padding;
         background-clip: padding-box;
     }
-    .nav-item, .nav-link {
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        font-weight: lighter;
-        min-width: 120px;
-        margin: 10px 20px;
-    }
 }
-footer{
-    position: relative;
-}
-footer p{
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    margin-top: 15px;
-}
-.back-to-top{
-    position: absolute;
-    padding: 0 10px;
-    display: inline-block;
-    right: 20px;
-    bottom: 15px;
+
+@media (min-width: 1281px) {
+    /* hi-res laptops and desktops */
 }

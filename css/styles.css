@@ -6,7 +6,7 @@
     --hover-dark: #004b23;
     --filter-main: invert(51%) sepia(35%) saturate(5081%) hue-rotate(67deg) brightness(101%) contrast(102%);
     --filter-main-dark: invert(15%) sepia(45%) saturate(6743%) hue-rotate(116deg) brightness(94%) contrast(103%);
-    --background-gradient: linear-gradient(180deg, rgba(56,176,0,0) 54%, rgba(56,176,0,1) 100%);;
+    --background-gradient: linear-gradient(180deg, rgba(56, 176, 0, 0) 54%, rgba(56, 176, 0, 1) 100%);;
 }
 
 html, body {
@@ -35,7 +35,7 @@ a.navbar-brand {
     padding: 0.5rem 0;
 }
 
-.navbar > .container-fluid{
+.navbar > .container-fluid {
     justify-content: space-evenly;
 }
 
@@ -226,13 +226,6 @@ a.navbar-brand {
     padding: 2em 1.5em;
 }
 
-/*.contact-section {*/
-/*    gap: 40px;*/
-/*}*/
-/*.contact-section {*/
-/*    gap: 120px;*/
-/*    flex-flow: row wrap;*/
-/*}*/
 
 
 .help h2 {
@@ -323,7 +316,7 @@ a.navbar-brand {
     height: 100%;
     display: inline-block;
     background: rgb(38, 95, 31);
-     background: var(--background-gradient);
+    background: var(--background-gradient);
 }
 
 .disease-card img {
@@ -405,17 +398,19 @@ a.navbar-brand {
     margin-bottom: 15px;
     text-transform: uppercase;
 }
-.information-card a{
+
+.information-card a {
     color: white;
     text-decoration: none;
 }
-.information-card p{
+
+.information-card p {
     margin-top: 20px;
     padding: 0 20px 0 0;
 }
 
 .information-logo {
-    height: 100px;
+    width: 100%;
     margin: auto;
 }
 
@@ -530,7 +525,6 @@ footer p {
 
     .contact-us {
         width: 40%;
-        text-align: left;
     }
 
     .contact-section {
@@ -552,11 +546,14 @@ footer p {
         min-width: 313px;
         flex: 1 1 313px;
     }
-    .navbar > .container-fluid{
+
+    .navbar > .container-fluid {
         justify-content: space-between;
     }
+
     .carousel-item img, #carouselControls {
         height: 30em;
+
     }
 
 }
@@ -579,6 +576,7 @@ footer p {
     .prices-section h1 {
         font-size: 3rem;
     }
+
 
 }
 
@@ -643,6 +641,7 @@ footer p {
         -moz-background-clip: padding;
         background-clip: padding-box;
     }
+
     .carousel-item img, #carouselControls {
         height: 50em;
     }

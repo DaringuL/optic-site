@@ -27,3 +27,6 @@ document.getElementById("contact-us").addEventListener("click", function (event)
 
 
 })
+
+let year = new Date().getUTCFullYear().toString();
+document.querySelector(".year").innerHTML = year;

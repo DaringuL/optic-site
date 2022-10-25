@@ -1,3 +1,7 @@
+:root {
+    --semi-transparent-white: rgba(255, 255, 255, 0.75);
+}
+
 html, body {
     font-family: 'Inter Tight', sans-serif;
     padding: 0;
@@ -74,8 +78,7 @@ a.navbar-brand {
     font-size: 0.75rem;
     font-weight: normal;
     letter-spacing: 2px;
-    background-color: rgba(255, 255, 255, 0.5);
-
+    background-color: var(--semi-transparent-white);
     text-align: center;
     padding: 1em;
 }
@@ -317,7 +320,8 @@ a.navbar-brand {
 }
 
 .disease-card img {
-    height: 100%;
+    height: 313px;
+    /*or height:100%*/
     min-height: 200px;
     width: 100%;
     object-fit: cover;
@@ -394,8 +398,11 @@ a.navbar-brand {
     margin-bottom: 15px;
     text-transform: uppercase;
 }
-
-.information-card p {
+.information-card a{
+    color: white;
+    text-decoration: none;
+}
+.information-card p{
     margin-top: 20px;
     padding: 0 20px 0 0;
 }
@@ -573,10 +580,10 @@ footer p {
         left: 100px;
         color: black;
         text-transform: uppercase;
-        font-size: 1.5rem;
-        font-weight: normal;
+        font-size: 2.25rem;
+        font-weight: lighter;
         letter-spacing: 2px;
-        background-color: white;
+        background-color: var(--semi-transparent-white);
         padding: 10px;
     }
 
@@ -625,4 +632,11 @@ footer p {
 
 @media (min-width: 1281px) {
     /* hi-res laptops and desktops */
+    .target {
+        border-top: 124px solid transparent;
+        margin-top: -124px;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box;
+    }
 }

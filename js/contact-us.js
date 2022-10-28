@@ -8,8 +8,8 @@ let formContainer = document.getElementById("form-container");
 let thankYouContainer = document.getElementById("thank-you-container");
 let errorContainer = document.getElementById("error-container");
 
-document.getElementById("question").addEventListener("input", function (event){
-    event.target.setAttribute("rows","3");
+document.getElementById("question").addEventListener("input", function (event) {
+    event.target.setAttribute("rows", "3");
 });
 
 
@@ -33,35 +33,49 @@ button.addEventListener("click", function (event) {
     const phone = document.getElementById("phone").value;
     const email = document.getElementById("email").value;
     const question = document.getElementById("question").value;
-
-    if (name === ""|| phone === ""){
-        if(name === ""){nameSpan.removeAttribute("hidden")} else if (name !== "") {nameSpan.setAttribute("hidden", "")}
-        if(phone === ""){phoneSpan.removeAttribute("hidden")} else if(phone !== "") {phoneSpan.setAttribute("hidden", "")}
-        alertSpan.removeAttribute("hidden");
-    } else {
-        const http = new XMLHttpRequest();
-        http.open("POST", "https://optic-server.herokuapp.com/contact", true);
-        http.setRequestHeader("Content-Type", "application/json");
-        http.send(JSON.stringify({
-            name: name,
-            email: email,
-            phone: phone,
-            question: question
-        }))
-        http.onload = function() {
-            // alert(http.responseText);
-            formContainer.setAttribute("hidden", "");
-            thankYouContainer.removeAttribute("hidden");
-            resetForm();
+    if (window.matchMedia("(max-width: 767px)").matches)
+        if (name === "" || phone === "") {
+            if (name === "") {
+                nameSpan.removeAttribute("hidden")
+            } else if (name !== "") {
+                nameSpan.setAttribute("hidden", "")
+            }
+            if (phone === "") {
+                phoneSpan.removeAttribute("hidden")
+            } else if (phone !== "") {
+                phoneSpan.setAttribute("hidden", "")
+            }
+            if (!checked) {
+                alertSpan.textContent = "Будь ласка, надайте згоду на обробку персональних даних"
+            }
+            alertSpan.removeAttribute("hidden");
+        } else if (!checked) {
+            alertSpan.textContent = "Будь ласка, надайте згоду на обробку персональних даних";
+            alertSpan.removeAttribute("hidden");
+        } else {
+            const http = new XMLHttpRequest();
+            http.open("POST", "https://optic-server.herokuapp.com/contact", true);
+            http.setRequestHeader("Content-Type", "application/json");
+            http.send(JSON.stringify({
+                name: name,
+                email: email,
+                phone: phone,
+                question: question
+            }))
+            http.onload = function () {
+                // alert(http.responseText);
+                formContainer.setAttribute("hidden", "");
+                thankYouContainer.removeAttribute("hidden");
+                resetForm();
+            }
+            http.onerror = function () {
+                formContainer.setAttribute("hidden", "");
+                errorContainer.removeAttribute("hidden");
+            }
         }
-        http.onerror = function () {
-            formContainer.setAttribute("hidden", "");
-            errorContainer.removeAttribute("hidden");
-        }
-    }
 })
 
-function resetForm(){
+function resetForm() {
     document.getElementById("name").value = "";
     document.getElementById("phone").value = "";
     document.getElementById("email").value = "";

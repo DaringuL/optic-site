@@ -883,7 +883,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.2): alert.js
+   * Bootstrap (v5.2.2): alertSpan.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -892,7 +892,7 @@
    */
 
   const NAME$f = 'alert';
-  const DATA_KEY$a = 'bs.alert';
+  const DATA_KEY$a = 'bs.alertSpan';
   const EVENT_KEY$b = `.${DATA_KEY$a}`;
   const EVENT_CLOSE = `close${EVENT_KEY$b}`;
   const EVENT_CLOSED = `closed${EVENT_KEY$b}`;

@@ -171,9 +171,7 @@ a.navbar-brand {
 }
 
 .custom-card {
-
     flex: 1 0 auto;
-
     height: 50%;
     display: flex;
     flex-flow: column nowrap;

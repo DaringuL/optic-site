@@ -7,9 +7,9 @@ html, body {
 }
 
 .top-section, .top-section img {
-    object-fit: cover;
+    background: url("../imgstck/top-image.jpg") no-repeat center;
+    background-size: cover;
     height: 20em;
-    width: 100%;
     position: relative;
 
 }

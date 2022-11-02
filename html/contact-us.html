@@ -52,15 +52,15 @@
 <main>
     <!--TOP COVER PHOTO-->
     <div class="top-section">
-<!--        <img src="../imgstck/top-image.jpg"/>-->
+<!--        <img src="../images/foropter.jpg"/>-->
         <div class="page-name"><h2>Контакт</h2></div>
     </div>
 
     <!--TOP LOGO DIVIDER-->
     <div class="logo-divider">
-       <div class="main-point-card">
-           <img id="logo-img" class="information-logo" src="../images/logo-main-color-grey-background.png"/>
-       </div>
+        <div class="main-point-card">
+            <img id="logo-img" class="information-logo" src="../images/logo-main-color-grey-background.png"/>
+        </div>
         <div class="main-point-card">
             <h2>ОПТИКА <br>ПЛЮС-МІНУС</h2>
         </div>
@@ -73,25 +73,33 @@
         </div>
         <div class="half-screen form-section" id="form-container">
             <div class="form-input-wrapper">
-                    <input  class="form-input"  type="text" name="name" id="name" placeholder="Ім'я та Прізвище*"/>
+                <input class="form-input" type="text" name="name" id="name" placeholder="Ім'я та Прізвище*"/>
                 <span id="name-span" hidden>Це поле обов'язкове для заповнення</span>
             </div>
             <div class="form-input-wrapper">
-                    <input  class="form-input" type="email" name="email" id="email" placeholder="E-Mail"/>
+                <input class="form-input" type="email" name="email" id="email" placeholder="E-Mail"/>
             </div>
             <div class="form-input-wrapper">
-                    <input  class="form-input" type="tel" name="phone" id="phone" placeholder="Контактний телефон*"/>
+                <input class="form-input" type="tel" name="phone" id="phone" placeholder="Контактний телефон*"/>
                 <span id="phone-span" hidden>Це поле обов'язкове для заповнення</span>
             </div>
             <div class="form-input-wrapper">
-                <textarea class="form-input"  id="question" name="question" rows="1" cols="30"
+                <textarea class="form-input" id="question" name="question" rows="1" cols="30"
                           placeholder="Що вас цікавить?"></textarea>
             </div>
             <div class="form-input-wrapper">
-                <p class="consent"><button class="checkbox"></button> Надаю згоду на обробку моїх особистих даних, а саме: ім'я та прізвище, e-mail, номер телефону, для відповіді на повідомлення, надіслане за допомогою контактної форми. </p>
+                <p class="consent">
+                    <button class="checkbox"></button>
+                    Надаю згоду на обробку моїх особистих даних, а саме: ім'я та прізвище, e-mail, номер телефону, для
+                    відповіді на повідомлення, надіслане за допомогою контактної форми.
+                </p>
             </div>
-             <div>
-                <button id="contact-us-button"  class="blocked" disabled>Надіслати</button>
+            <div>
+                <button id="contact-us-button">
+                    <span class="spinner-border text-success" role="status" hidden> </span>
+                        <span class="sr-only" hidden>Завантаження...</span>
+                    <span class="send">Надіслати</span>
+                </button>
             </div>
             <span id="alert" hidden>Принаймі одне з обов'язкових полів не заповнене. Будь ласка, перевірте заповнені поля</span>
         </div>

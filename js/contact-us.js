@@ -17,62 +17,65 @@ checkbox.addEventListener("click", function (event) {
     if (!checked) {
         checked = true;
         event.target.classList.add("checked");
-        button.classList.remove("blocked");
-        button.removeAttribute("disabled");
     } else {
         checked = false;
         event.target.classList.remove("checked");
-        button.classList.add("blocked");
-        button.setAttribute("disabled", "");
     }
 });
 
 
 button.addEventListener("click", function (event) {
+
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
     const email = document.getElementById("email").value;
     const question = document.getElementById("question").value;
-    if (window.matchMedia("(max-width: 767px)").matches)
-        if (name === "" || phone === "") {
-            if (name === "") {
-                nameSpan.removeAttribute("hidden")
-            } else if (name !== "") {
-                nameSpan.setAttribute("hidden", "")
-            }
-            if (phone === "") {
-                phoneSpan.removeAttribute("hidden")
-            } else if (phone !== "") {
-                phoneSpan.setAttribute("hidden", "")
-            }
-            if (!checked) {
-                alertSpan.textContent = "Будь ласка, надайте згоду на обробку персональних даних"
-            }
-            alertSpan.removeAttribute("hidden");
-        } else if (!checked) {
+    if (name === "" || phone === "" || !checked) {
+
+        if (name === "") {
+            nameSpan.removeAttribute("hidden")
+        }
+        if (name !== "") {
+            nameSpan.setAttribute("hidden", "")
+        }
+
+        if (phone === "") {
+            phoneSpan.removeAttribute("hidden")
+        }
+        if (phone !== "") {
+            phoneSpan.setAttribute("hidden", "")
+        }
+
+        if (!checked) {
             alertSpan.textContent = "Будь ласка, надайте згоду на обробку персональних даних";
             alertSpan.removeAttribute("hidden");
-        } else {
-            const http = new XMLHttpRequest();
-            http.open("POST", "https://optic-server.herokuapp.com/contact", true);
-            http.setRequestHeader("Content-Type", "application/json");
-            http.send(JSON.stringify({
-                name: name,
-                email: email,
-                phone: phone,
-                question: question
-            }))
-            http.onload = function () {
-                // alert(http.responseText);
-                formContainer.setAttribute("hidden", "");
-                thankYouContainer.removeAttribute("hidden");
-                resetForm();
-            }
-            http.onerror = function () {
-                formContainer.setAttribute("hidden", "");
-                errorContainer.removeAttribute("hidden");
-            }
         }
+        if (checked) {
+            alertSpan.setAttribute("hidden", "");
+        }
+    } else {
+        showLoadingSpinner();
+        const http = new XMLHttpRequest();
+        http.open("POST", "https://optic-server.herokuapp.com/contact", true);
+        http.setRequestHeader("Content-Type", "application/json");
+        http.send(JSON.stringify({
+            name: name,
+            email: email,
+            phone: phone,
+            question: question
+        }))
+        http.onload = function () {
+            // alert(http.responseText);
+            formContainer.setAttribute("hidden", "");
+            thankYouContainer.removeAttribute("hidden");
+            resetForm();
+        }
+        http.onerror = function () {
+            formContainer.setAttribute("hidden", "");
+            errorContainer.removeAttribute("hidden");
+        }
+    }
+
 })
 
 function resetForm() {
@@ -90,3 +93,13 @@ function resetForm() {
 
 let year = new Date().getUTCFullYear().toString();
 document.querySelector(".year").innerHTML = year;
+
+function showLoadingSpinner() {
+    let spinner = document.querySelector(".spinner-border");
+    let loading = document.querySelector(".sr-only");
+    loading.removeAttribute("hidden");
+    spinner.removeAttribute("hidden");
+    let send = document.querySelector(".send");
+    send.setAttribute("hidden", "");
+    button.setAttribute("disabled", "");
+}

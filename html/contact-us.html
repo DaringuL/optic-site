@@ -39,10 +39,10 @@
                     <!--                        <a class="nav-link" href="#doctors">Лікарі</a>-->
                     <!--                    </li>-->
                     <li class="nav-item">
-                        <a class="nav-link" href="prices.html">Ціни</a>
+                        <a class="nav-link" href="../html/prices.html">Ціни</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#form-container">Контакт</a>
+                        <a class="nav-link" href="contact-us.html">Контакт</a>
                     </li>
                 </ul>
             </div>
@@ -67,25 +67,27 @@
     </div>
 
     <!--CONTACT FORM SECTION-->
-    <div class="two-blocks-container">
-        <div class="half-screen image-container">
+    <div class="form-blocks">
+        <div class="form-card image-container">
             <img src="../images/diagnostic.png" alt="діагностика очного дна"/>
         </div>
-        <div class="half-screen form-section" id="form-container">
+        <div class="form-card form-section" id="form-container">
             <div class="form-input-wrapper">
+                <label for="name" hidden>Ім'я та Прізвище</label>
                 <input class="form-input" type="text" name="name" id="name" placeholder="Ім'я та Прізвище*"/>
                 <span id="name-span" hidden>Це поле обов'язкове для заповнення</span>
             </div>
             <div class="form-input-wrapper">
-                <input class="form-input" type="email" name="email" id="email" placeholder="E-Mail"/>
+                <label for="email" hidden>E-Mail</label><input class="form-input" type="email" name="email" id="email" placeholder="E-Mail"/>
             </div>
             <div class="form-input-wrapper">
-                <input class="form-input" type="tel" name="phone" id="phone" placeholder="Контактний телефон*"/>
+                <label for="phone" hidden>Контактний телефон</label><input class="form-input" type="tel" name="phone" id="phone" placeholder="Контактний телефон*"/>
                 <span id="phone-span" hidden>Це поле обов'язкове для заповнення</span>
             </div>
             <div class="form-input-wrapper">
+                <label for="question" hidden>Що вас цікавить?</label>
                 <textarea class="form-input" id="question" name="question" rows="1" cols="30"
-                          placeholder="Що вас цікавить?"></textarea>
+                                                        placeholder="Що вас цікавить?"></textarea>
             </div>
             <div class="form-input-wrapper">
                 <p class="consent">

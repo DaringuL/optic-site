@@ -277,7 +277,6 @@ footer p {
     background-size: cover;
     height: 20em;
     position: relative;
-
 }
 
 .top-section::after {
@@ -311,6 +310,7 @@ footer p {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+
 
 /*---------NAVIGATION FIX------------*/
 @media (min-width: 1025px) {

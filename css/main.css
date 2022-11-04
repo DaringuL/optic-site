@@ -18,7 +18,7 @@
     font-size: 0.75rem;
     font-weight: normal;
     letter-spacing: 2px;
-    background-color: var(--semi-transparent-white);
+    background-color: var(--semi-transparent);
     text-align: center;
     padding: 1em;
 }
@@ -39,7 +39,7 @@
         font-size: 2.25rem;
         font-weight: lighter;
         letter-spacing: 2px;
-        background-color: var(--semi-transparent-white);
+        background-color: var(--semi-transparent);
         padding: 10px;
     }
 }

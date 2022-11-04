@@ -1,5 +1,5 @@
 :root {
-    --semi-transparent-white: rgba(255, 255, 255, 0.75);
+    --semi-transparent: rgba(255, 255, 255, 0.75);
     --main-color: #38B000;
     --main-background: #007200;
     --main-bright: #70e000;
@@ -65,7 +65,7 @@ a.navbar-brand {
 .contact-section {
     width: 100%;
     background-color: var(--main-background);
-    color: white;
+    color: #fff;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -80,7 +80,7 @@ a.navbar-brand {
     font-size: 2rem;
     font-family: 'Inter Tight', sans-serif;
     letter-spacing: 2px;
-    color: white;
+    color: #fff;
     line-height: 1.5;
 
 }
@@ -113,7 +113,7 @@ a.navbar-brand {
 
 .contact-section button:hover {
     background-color: var(--main-color);
-    color: white;
+    color: #fff;
 }
 
 @media (min-width: 641px) {
@@ -149,7 +149,7 @@ a.navbar-brand {
     overflow: hidden;
     position: relative;
     padding: 40px;
-    color: white;
+    color: #fff;
 }
 
 .information-card h3 {
@@ -159,7 +159,7 @@ a.navbar-brand {
 }
 
 .information-card a {
-    color: white;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -177,7 +177,7 @@ a.navbar-brand {
     height: 70px;
     width: 70px;
     border-radius: 50%;
-    background-color: white;
+    background-color: #fff;
     padding: 20px;
     object-fit: contain;
     position: absolute;
@@ -303,7 +303,7 @@ footer p {
 .page-name h2 {
     font-family: 'Inter Tight', sans-serif;
     font-weight: normal;
-    color: white;
+    color: #fff;
     text-align: center;
     font-size: 2rem;
     padding: 25px;

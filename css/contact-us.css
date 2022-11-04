@@ -39,7 +39,7 @@
     .page-name h2 {
         text-align: left;
         margin-left: 15%;
-        border: solid white 5px;
+        border: solid #fff 5px;
         border-right: 0;
         padding: 30px;
         width: fit-content;
@@ -52,10 +52,10 @@
 }
 
 @media (min-width: 961px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
     .top-section{
         height: 30em;
     }
+
     .page-name {
         top: 45%;
     }
@@ -63,7 +63,7 @@
     .page-name h2 {
         text-align: left;
         margin-left: 15%;
-        border: solid white 10px;
+        border: solid #fff 10px;
         border-right: 0;
         font-size: 3.5rem;
         padding: 40px;
@@ -78,7 +78,6 @@
 }
 
 @media (min-width: 1025px) {
-    /* big landscape tablets, laptops, and desktops */
     .title-card, .logo-card {
         padding: 1em 2em;
     }
@@ -119,7 +118,6 @@
     align-content: center;
 }
 
-
 .form-card {
     flex: 1 1 20%;
     height: 540px;
@@ -132,7 +130,6 @@
     flex-shrink: 0;
     min-width: 240px;
 }
-
 
 .form-card img {
     height: 100%;
@@ -148,12 +145,9 @@
     }
 }
 
-
-
-
 .form-section {
     background-color: var(--main-color);
-    color: white;
+    color: #fff;
     font-family: 'Raleway', sans-serif;
     display: flex;
     flex-flow: column nowrap;
@@ -176,17 +170,17 @@
     width: 100%;
     flex: 1 0 100%;
     background-color: var(--main-color);
-    color: white;
+    color: #fff;
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
     letter-spacing: 1px;
     border: 0;
-    border-bottom: solid 1px white;
+    border-bottom: solid 1px #fff;
     display: inline-block;
 }
 
 .form-input::placeholder {
-    color: white;
+    color: #fff;
     vertical-align: bottom;
     text-align: left;
     font-family: 'Raleway', sans-serif;
@@ -197,7 +191,7 @@
 .checkbox {
     height: 15px;
     width: 15px;
-    border: solid 1px white;
+    border: solid 1px #fff;
     border-radius: 3px;
     padding: 0;
 }
@@ -205,7 +199,7 @@
 .checked {
     background-image: url("../images/check.png");
     background-size: contain;
-    background-color: white;
+    background-color: #fff;
 }
 
 .consent {
@@ -223,15 +217,15 @@
     font-weight: normal;
     letter-spacing: 2px;
     text-transform: uppercase;
-    border: solid 2px white;
-    color: white;
+    border: solid 2px #fff;
+    color: #fff;
     font-size: 1.5rem;
     padding: 10px;
 
 }
 
 #contact-us-button:hover {
-    background-color: white;
+    background-color: #fff;
     color: var(--main-color);
 }
 
@@ -245,12 +239,15 @@
 
 .thank-you {
     background-color: var(--main-color);
-    color: white;
+    color: #fff;
     font-family: 'Raleway', sans-serif;
     font-size: 2rem;
     text-align: center;
     padding: 1.5em;
     letter-spacing: 1px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
 
 .thank-you h2 {

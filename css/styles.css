@@ -6,13 +6,15 @@
     --hover-dark: #004b23;
     --filter-main: invert(51%) sepia(35%) saturate(5081%) hue-rotate(67deg) brightness(101%) contrast(102%);
     --filter-main-dark: invert(15%) sepia(45%) saturate(6743%) hue-rotate(116deg) brightness(94%) contrast(103%);
-    --background-gradient: linear-gradient(180deg, rgba(56, 176, 0, 0) 54%, rgba(56, 176, 0, 1) 100%);;
+    --background-gradient: linear-gradient(180deg, rgba(56, 176, 0, 0) 54%, rgba(56, 176, 0, 1) 100%);
+    --bg: rgb(248, 249, 250);
 }
 
 html, body {
     font-family: 'Inter Tight', sans-serif;
     padding: 0;
     margin: 0;
+    background-color: var(--bg);
 }
 
 
@@ -43,174 +45,22 @@ a.navbar-brand {
     color: var(--main-color);
 }
 
-/*div.navbar-brand {*/
-/*    padding: 30px;*/
-/*    position: relative;*/
-/*    text-align: left;*/
-/*}*/
-
-/*.navbar {*/
-/*    flex-flow: column;*/
-/*    justify-content: center;*/
-/*    justify-items: center;*/
-/*    text-align: center;*/
-/*}*/
-
-
-/*.mx-auto {*/
-/*    margin-left: 100px !important;*/
-/*}*/
-
-/*button.navbar-toggler {*/
-/*    position: absolute;*/
-/*    right: 20%;*/
-/*    top: 20px;*/
-/*}*/
-
-/*---------CAROUSEL------------*/
-.carousel {
-    margin-top: 46px;
-    position: relative;
+@media (min-width: 641px) {
+    .navbar > .container-fluid {
+        justify-content: space-between;
+    }
 }
 
-.carousel-item img, #carouselControls {
-    object-fit: cover;
-    height: 15em;
+@media (min-width: 1025px) {
+    .nav-item, .nav-link {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        min-width: 120px;
+        margin: 10px 20px;
+    }
 }
 
-.carousel-caption h5 {
-    position: absolute;
-    bottom: -5px;
-    left: -10px;
-    color: black;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: normal;
-    letter-spacing: 2px;
-    background-color: var(--semi-transparent-white);
-    text-align: center;
-    padding: 1em;
-}
-
-
-/*---------MAIN POINTS------------*/
-.main-points-container {
-    height: auto;
-    width: 100%;
-    background-color: var(--main-background);
-    color: white;
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 20px;
-}
-
-.main-point-card img {
-    width: 100%;
-    height: 5em;
-    object-fit: cover;
-    padding: 0;
-}
-
-#logo-img {
-    width: 100%;
-}
-
-.main-point-card {
-    font-family: "Inter Tight", serif;
-    font-weight: 200;
-    font-size: 1.5rem;
-    padding: 15px 0 15px;
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-}
-
-.main-point-card div:first-child {
-    font-size: 3rem;
-    font-weight: bolder;
-    color: var(--main-bright);
-}
-
-/*---------INFORMATION CARDS------------*/
-.two-blocks-container {
-    display: flex;
-    width: 100%;
-    flex-flow: column-reverse nowrap;
-    height: auto;
-    justify-content: center;
-    align-content: center;
-}
-
-
-.half-screen {
-    flex: 1 1 20%;
-    height: 540px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-    flex-shrink: 0;
-    min-width: 240px;
-}
-
-
-.half-screen img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    margin: auto;
-}
-
-.custom-card {
-    flex: 1 0 auto;
-    height: 50%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px 1em;
-    width: 100%;
-}
-
-
-.custom-card img {
-    height: 50px;
-    width: 50px;
-    object-fit: contain;
-    margin: 20px auto;
-}
-
-.feature-icon {
-    filter: var(--filter-main);
-}
-
-.feature-icon:hover {
-    filter: var(--filter-main-dark);
-}
-
-.custom-card h2 {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: bolder;
-    letter-spacing: 1px;
-    font-size: 1.5rem;
-}
-
-.custom-card p {
-    font-family: 'Raleway', sans-serif;
-    padding-right: 10px;
-}
-
-/*---------NEED HELP?--------*/
+/*---------CONTACT SECTION------------*/
 
 .contact-section {
     width: 100%;
@@ -223,7 +73,6 @@ a.navbar-brand {
     gap: 2em;
     padding: 2em 1.5em;
 }
-
 
 
 .help h2 {
@@ -267,111 +116,23 @@ a.navbar-brand {
     color: white;
 }
 
-.disease-section {
-    height: auto;
-    text-align: center;
-    padding: 50px;
+@media (min-width: 641px) {
+    .contact-us {
+        width: 40%;
+    }
+
+    .contact-section {
+        flex-flow: row wrap;
+        gap: 2em;
+        justify-content: space-evenly;
+    }
+
+    .contact-section button {
+        font-size: 2em;
+    }
 }
 
-.disease-section h2:first-child {
-    color: var(--main-bright);
-}
-
-.disease-section h2 {
-    text-transform: uppercase;
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-/** diseases area**/
-
-.disease-card-container {
-    height: auto;
-    width: 100%;
-    padding: 0 30px 30px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-content: flex-start;
-    gap: 10px;
-}
-
-
-.disease-card {
-    height: 313px;
-    flex: 1 1;
-    overflow: hidden;
-    position: relative;
-}
-
-.disease-card:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    background: rgb(38, 95, 31);
-    background: var(--background-gradient);
-}
-
-.disease-card img {
-    height: 313px;
-    /*or height:100%*/
-    min-height: 200px;
-    width: 100%;
-    object-fit: cover;
-    z-index: -2;
-}
-
-.disease-card h5 {
-    color: white;
-    position: absolute;
-    bottom: 10px;
-    text-align: center;
-    width: 100%;
-    z-index: 1;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    font-weight: normal;
-    letter-spacing: 1px;
-
-}
-
-/** PRICES **/
-.prices-section {
-    text-align: center;
-    padding: 50px;
-    font-family: 'Raleway', sans-serif;
-}
-
-.prices-section h1 {
-    text-transform: uppercase;
-    color: var(--main-bright);
-    font-size: 2rem;
-}
-
-.prices-section p {
-    max-width: 300px;
-    margin: 25px auto 25px;
-}
-
-.prices-section button {
-    padding: 15px 20px;
-    font-size: 2rem;
-    border: 1px var(--main-color) solid;
-    background-color: var(--main-color);
-    color: white;
-    font-weight: bolder;
-}
-
-.prices-section button:hover {
-    background-color: var(--main-background);
-}
-
-/** INFORMATION**/
+/*---------INFORMATION SECTION------------*/
 .location-section {
     display: flex;
     width: 100%;
@@ -446,6 +207,7 @@ a.navbar-brand {
     background-color: #006400;
 }
 
+/*---------MAPS SECTION------------*/
 .maps-section {
     display: flex;
     flex-flow: column nowrap;
@@ -469,6 +231,16 @@ a.navbar-brand {
     min-width: 350px;
 }
 
+@media (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+    .mapouter {
+        width: 500px;
+    }
+
+    .maps-section {
+        flex-flow: row wrap;
+    }
+}
 
 .target {
     border-top: 72px solid transparent;
@@ -478,6 +250,7 @@ a.navbar-brand {
     background-clip: padding-box;
 }
 
+/*---------FOOTER------------*/
 footer {
     position: relative;
 }
@@ -498,129 +271,49 @@ footer p {
     text-transform: uppercase;
 }
 
-@media (min-width: 320px) {
-    /* smartphones, iPhone, portrait 480x320 phones */
-}
-
-@media (min-width: 481px) {
-    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-}
-
-@media (min-width: 641px) {
-    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-    .custom-card {
-        width: 40%;
-        padding: 1em;
-    }
-
-    .main-point-card {
-        flex: 1 1 300px;
-    }
-
-    #logo-img {
-        flex: 1 1 100%;
-    }
-
-    .contact-us {
-        width: 40%;
-    }
-
-    .contact-section {
-        flex-flow: row wrap;
-        gap: 2em;
-        justify-content: space-evenly;
-    }
-
-    .contact-section button {
-        font-size: 2em;
-    }
-
-    .disease-card-container {
-        flex-flow: row wrap;
-        align-items: flex-start;
-    }
-
-    .disease-card {
-        min-width: 313px;
-        flex: 1 1 313px;
-    }
-
-    .navbar > .container-fluid {
-        justify-content: space-between;
-    }
-
-    .carousel-item img, #carouselControls {
-        height: 30em;
-
-    }
+/*---------TOP COVER PHOTO------------*/
+.top-section, .top-section img {
+    background: url("../imgstck/top-image.jpg") no-repeat center;
+    background-size: cover;
+    height: 20em;
+    position: relative;
 
 }
 
-@media (min-width: 961px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-    .carousel-caption h5 {
-        position: absolute;
-        bottom: 70px;
-        left: 100px;
-        color: black;
-        text-transform: uppercase;
-        font-size: 2.25rem;
-        font-weight: lighter;
-        letter-spacing: 2px;
-        background-color: var(--semi-transparent-white);
-        padding: 10px;
-    }
-
-    .prices-section h1 {
-        font-size: 3rem;
-    }
-
-
+.top-section::after {
+    background-color: #A7A7A787;
+    opacity: .6;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    left: 0;
+    top: 0;
+    display: inline-block;
 }
 
+.page-name {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 45%;
+    left: 0;
+}
+
+.page-name h2 {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    padding: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/*---------NAVIGATION FIX------------*/
 @media (min-width: 1025px) {
-    /* big landscape tablets, laptops, and desktops */
-    .nav-item, .nav-link {
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        min-width: 120px;
-        margin: 10px 20px;
-    }
-
-    #logo-img {
-        width: 30%;
-    }
-
-    .two-blocks-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-
-    .mapouter {
-        width: 500px;
-    }
-
-    .maps-section {
-        flex-flow: row wrap;
-    }
-
-    .main-points-container {
-        flex-flow: row wrap;
-        align-items: stretch;
-        justify-content: center;
-        gap: 3em;
-    }
-
-    .main-point-card {
-        flex: 1 1 180px;
-        padding: 1em 2em;
-    }
-
-    #logo-img {
-        flex: 1 0 350px;
-    }
-
     .target {
         border-top: 92px solid transparent;
         margin-top: -92px;
@@ -631,16 +324,11 @@ footer p {
 }
 
 @media (min-width: 1281px) {
-    /* hi-res laptops and desktops */
     .target {
         border-top: 124px solid transparent;
         margin-top: -124px;
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box;
-    }
-
-    .carousel-item img, #carouselControls {
-        height: 50em;
     }
 }

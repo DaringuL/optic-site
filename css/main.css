@@ -1,0 +1,354 @@
+/*---------CAROUSEL------------*/
+.carousel {
+    margin-top: 46px;
+    position: relative;
+}
+
+.carousel-item img, #carouselControls {
+    object-fit: cover;
+    height: 15em;
+}
+
+.carousel-caption h5 {
+    position: absolute;
+    bottom: -5px;
+    left: -10px;
+    color: black;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: var(--semi-transparent-white);
+    text-align: center;
+    padding: 1em;
+}
+
+@media (min-width: 641px) {
+    .carousel-item img, #carouselControls {
+        height: 30em;
+    }
+}
+
+@media (min-width: 961px) {
+    .carousel-caption h5 {
+        position: absolute;
+        bottom: 70px;
+        left: 100px;
+        color: black;
+        text-transform: uppercase;
+        font-size: 2.25rem;
+        font-weight: lighter;
+        letter-spacing: 2px;
+        background-color: var(--semi-transparent-white);
+        padding: 10px;
+    }
+}
+
+@media (min-width: 1281px) {
+    .carousel-item img, #carouselControls {
+        height: 50em;
+    }
+}
+
+
+/*---------MAIN POINTS------------*/
+.main-points-container {
+    height: auto;
+    width: 100%;
+    background-color: var(--main-background);
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+}
+
+.main-point-card img {
+    width: 100%;
+    height: 5em;
+    object-fit: cover;
+    padding: 0;
+}
+
+
+
+.main-point-card {
+    font-family: "Inter Tight", serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+    padding: 15px 0 15px;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.main-point-card div:first-child {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: var(--main-bright);
+}
+
+
+@media (min-width: 641px) {
+    .main-point-card {
+        flex: 1 1 300px;
+    }
+}
+
+@media (min-width: 641px) {
+    .main-point-card {
+        flex: 1 1 300px;
+    }
+
+    #logo-img {
+        flex: 1 1 100%;
+    }
+}
+
+
+@media (min-width: 1281px) {
+    /* big landscape tablets, laptops, and desktops */
+    .main-points-container {
+        flex-flow: row nowrap;
+        align-items: stretch;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .main-point-card {
+        flex: 0 0 220px;
+        padding: 1em 1em;
+    }
+
+    #logo-img {
+        flex: 1 0 400px;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1800px) {
+    .main-points-container {
+        justify-content: flex-end;
+        gap: 1em;
+        align-items: center;
+    }
+    .main-point-card img{
+        height:7em;
+    }
+}
+
+
+/*---------INFORMATION CARDS------------*/
+.two-blocks-container {
+    display: flex;
+    width: 100%;
+    flex-flow: column-reverse nowrap;
+    height: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.half-screen {
+    flex: 1 1 20%;
+    height: 540px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    flex-shrink: 0;
+    min-width: 240px;
+}
+
+
+.half-screen img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.custom-card {
+    flex: 1 0 auto;
+    height: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 1em;
+    width: 100%;
+}
+
+
+.custom-card img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    margin: 20px auto;
+}
+
+.feature-icon {
+    filter: var(--filter-main);
+}
+
+.feature-icon:hover {
+    filter: var(--filter-main-dark);
+}
+
+.custom-card h2 {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
+
+.custom-card p {
+    font-family: 'Raleway', sans-serif;
+    padding-right: 10px;
+}
+
+@media (min-width: 641px) {
+    .custom-card {
+        width: 40%;
+        padding: 1em;
+    }
+}
+
+@media (min-width: 1025px) {
+    .two-blocks-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/*---------DISEASE SECTION------------*/
+.disease-section {
+    height: auto;
+    text-align: center;
+    padding: 50px;
+}
+
+.disease-section h2:first-child {
+    color: var(--main-bright);
+}
+
+.disease-section h2 {
+    text-transform: uppercase;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.disease-card-container {
+    height: auto;
+    width: 100%;
+    padding: 0 30px 30px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 10px;
+}
+
+
+.disease-card {
+    height: 313px;
+    flex: 1 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.disease-card:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: rgb(38, 95, 31);
+    background: var(--background-gradient);
+}
+
+.disease-card img {
+    height: 313px;
+    /*or height:100%*/
+    min-height: 200px;
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.disease-card h5 {
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+
+}
+
+@media (min-width: 641px) {
+    .disease-card-container {
+        flex-flow: row wrap;
+        align-items: flex-start;
+    }
+
+    .disease-card {
+        min-width: 313px;
+        flex: 1 1 313px;
+    }
+}
+
+
+/*---------PRICES SECTION------------*/
+.prices-section {
+    text-align: center;
+    padding: 50px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.prices-section h1 {
+    text-transform: uppercase;
+    color: var(--main-bright);
+    font-size: 2rem;
+}
+
+.prices-section p {
+    max-width: 300px;
+    margin: 25px auto 25px;
+}
+
+.prices-section button {
+    padding: 15px 20px;
+    font-size: 2rem;
+    border: 1px var(--main-color) solid;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bolder;
+}
+
+.prices-section button:hover {
+    background-color: var(--main-background);
+}
+
+@media (min-width: 961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .prices-section h1 {
+        font-size: 3rem;
+    }
+}

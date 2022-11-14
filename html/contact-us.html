@@ -78,7 +78,7 @@
 
     <!--CONTACT FORM SECTION-->
     <div class="form-blocks">
-        <div class="form-card image-container">
+        <div class="form-card">
             <img src="../images/diagnostic.png" alt="діагностика очного дна"/>
         </div>
         <div class="form-card form-section" id="form-container">
@@ -106,6 +106,7 @@
                     Надаю згоду на обробку моїх особистих даних, а саме: ім'я та прізвище, e-mail, номер телефону, для
                     відповіді на повідомлення, надіслане за допомогою контактної форми.
                 </p>
+                <span id="alert" hidden>Будь ласка, надайте згоду на обробку персональних даних</span>
             </div>
             <div>
                 <button id="contact-us-button">
@@ -113,14 +114,14 @@
                         <span class="sr-only" hidden>Завантаження...</span>
                     <span class="send">Надіслати</span>
                 </button>
+
             </div>
-            <span id="alert" hidden>Принаймі одне з обов'язкових полів не заповнене. Будь ласка, перевірте заповнені поля</span>
         </div>
-        <div class="half-screen thank-you" id="thank-you-container" hidden>
+        <div class="form-card form-section thank-you" id="thank-you-container" hidden>
             <h2>Дякуємо за звернення!</h2>
             <h3>Ми отримали Ваше повідомлення і зателефонуємо Вам найближчим часом.</h3>
         </div>
-        <div class="half-screen thank-you" id="error-container" hidden>
+        <div class="form-card form-section thank-you" id="error-container" hidden>
             <h2>Дякуємо за звернення!</h2>
             <h3>На жаль, цей сервіс тимчасово недоступний. Будь ласка, зателефонуйте нам за номером: 093 162 81 44</h3>
         </div>

@@ -49,7 +49,6 @@ button.addEventListener("click", function () {
             }
         }
         if (!checked) {
-            alertSpan.textContent = "Будь ласка, надайте згоду на обробку персональних даних";
             alertSpan.removeAttribute("hidden");
         } else {
             alertSpan.setAttribute("hidden", "");

@@ -7,6 +7,7 @@ let phoneSpan = document.getElementById("phone-span");
 let formContainer = document.getElementById("form-container");
 let thankYouContainer = document.getElementById("thank-you-container");
 let errorContainer = document.getElementById("error-container");
+let phoneWrong = document.getElementById("phone-wrong");
 
 document.getElementById("question").addEventListener("input", function (event) {
     event.target.setAttribute("rows", "3");
@@ -24,33 +25,33 @@ checkbox.addEventListener("click", function (event) {
 });
 
 
-button.addEventListener("click", function (event) {
+button.addEventListener("click", function () {
 
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
     const email = document.getElementById("email").value;
     const question = document.getElementById("question").value;
-    if (name === "" || phone === "" || !checked) {
-
+    let formattedPhone = phoneValidation(phone);
+    if (name === "" || !checked || formattedPhone === false) {
         if (name === "") {
             nameSpan.removeAttribute("hidden")
-        }
-        if (name !== "") {
+        } else {
             nameSpan.setAttribute("hidden", "")
         }
-
         if (phone === "") {
-            phoneSpan.removeAttribute("hidden")
+            phoneSpan.removeAttribute("hidden");
+        } else {
+            phoneSpan.setAttribute("hidden", "");
+            if (formattedPhone === false) {
+                phoneWrong.removeAttribute("hidden");
+            } else {
+                phoneWrong.setAttribute("hidden", "")
+            }
         }
-        if (phone !== "") {
-            phoneSpan.setAttribute("hidden", "")
-        }
-
         if (!checked) {
             alertSpan.textContent = "Будь ласка, надайте згоду на обробку персональних даних";
             alertSpan.removeAttribute("hidden");
-        }
-        if (checked) {
+        } else {
             alertSpan.setAttribute("hidden", "");
         }
     } else {
@@ -61,7 +62,7 @@ button.addEventListener("click", function (event) {
         http.send(JSON.stringify({
             name: name,
             email: email,
-            phone: phone,
+            phone: formattedPhone,
             question: question
         }))
         http.onload = function () {
@@ -102,4 +103,22 @@ function showLoadingSpinner() {
     let send = document.querySelector(".send");
     send.setAttribute("hidden", "");
     button.setAttribute("disabled", "");
+}
+
+function phoneValidation(phone) {
+    let numbers = [...phone];
+    let allowedChars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+    function filterNumbers(num) {
+        if (allowedChars.includes(num)) return num
+    }
+
+    let filteredNumbers = numbers.filter(filterNumbers);
+    if (filteredNumbers.length === 10) return filteredNumbers.join("");
+    if (filteredNumbers.length === 12) {
+        if (filteredNumbers[0] === "3" && filteredNumbers[1] === "8" && filteredNumbers[2] === "0") {
+            return filteredNumbers.splice(2).join("")
+        }
+    }
+    return false
 }

@@ -233,7 +233,7 @@
     cursor: not-allowed;
 }
 
-#name-span, #phone-span, #alert {
+#name-span, #phone-span, #alert, #phone-wrong {
     color: #b00038;
 }
 
